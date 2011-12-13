@@ -260,7 +260,7 @@ var sh = {
 			var item = {
 				target: elements[i], 
 				// local params take precedence over globals
-				params: merge(globalParams, parseParams(elements[i].className))
+				params: merge(globalParams, parseParams(elements[i].getAttribute('config')))
 			};
 
 			if (item.params['brush'] == null)
